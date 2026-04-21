@@ -1,4 +1,3 @@
-📁 Estructura del repositorio
 BugsBasters-Tercer-Semestre/
 │
 ├── Base-de-Datos/
