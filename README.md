@@ -1,7 +1,4 @@
 
-El archivo README.md que se ve en la imagen tiene un problema de formato, especialmente en la sección de "Tecnologías utilizadas", donde el texto se amontonó sin espacios ni estructura.
-
-Aquí tienes una versión limpia, profesional y bien organizada usando Markdown para que el repositorio se vea impecable:
 
 BugsBasters - Tercer Semestre
 Este repositorio es mantenido por el equipo BugsBusters en el marco de la organización HotCode2025.
