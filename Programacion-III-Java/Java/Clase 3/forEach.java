@@ -6,5 +6,11 @@ public class TestForEach {
         for (int edad: edades) {
             System.out.PrintIn("edad = " + edad);
         }
+        Persona personas[] = {new Persona ('Juan'), new Persona('Carla'), new Persona('Beatriz')};
+
+        //ForEach
+        for(Persona persona: personas){
+            System.out.PrintIn("persona = " + persona);
+        }
     }
 }
