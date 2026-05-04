@@ -1,10 +1,15 @@
 # NetBeans / Java
-build/
-dist/
-nbproject/private/
+
 
 # Archivos compilados
 *.class
 
 # Logs
 *.log
+build/
+nbproject/private/
+dist/
+nbbuild/
+nbdist/
+*.properties
+*.xml
