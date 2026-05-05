@@ -1,0 +1,36 @@
+Clase-04 
+import psycopg2
+
+try:
+    # Conexión a la base de datos
+    conexion = psycopg2.connect(
+        user='postgres',
+        password='admin',
+        host='127.0.0.1',
+        port='5432',
+        database='test_bd'
+    )
+
+    cursor = conexion.cursor()
+
+    # Consulta SQL
+    sentencia = 'SELECT * FROM persona'
+    cursor.execute(sentencia)
+
+    # Obtener resultados
+    registros = cursor.fetchall()
+
+    print("Registros encontrados:")
+    for fila in registros:
+        print(fila)
+
+except Exception as e:
+    print("Ocurrió un error:", e)
+
+finally:
+    # Cierre de conexión
+    if 'cursor' in locals():
+        cursor.close()
+    if 'conexion' in locals():
+        conexion.close()
+    print("Conexión finalizada")
