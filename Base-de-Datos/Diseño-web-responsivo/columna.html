@@ -1,65 +1,90 @@
-!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
 
-    <Title> Documento</Title>
-   
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-   
     <link rel="stylesheet" href="columnas.css">
-
 </head>
+
 <body>
 
-<div class="contenedor">
+    <div class="contenedor">
 
+        <header class="fila">
+            <div id="logo" class="col-lg-2">Logotipo</div>
 
-    <header class="fila">
+            <div class="col-lg-8"></div>
 
-        <div id="logo" class="col-lg-2">Logotipo</div>
-         
-        <div class="col-lg-8"></div>
-
-        <div class="col-lg-2">
-
-             <div class="col-lg-4">
-
-               <center id="icono1">x</center>
-
+            <div class="col-lg-2">
+                <div class="col-lg-4">
+                    <center id="icono1">x</center>
+                </div>
+                <div class="col-lg-4">
+                    <center id="icono2">x</center>
+                </div>
+                <div class="col-lg-4">
+                    <center id="icono3">x</center>
+                </div>
             </div>
+        </header>
 
-             <div class="col-lg-4">
+        <!-- Navegación de clases anteriores -->
+        <nav class="fila"></nav>
 
-                <center id="icono2">x</center>
+        <!-- Sección 3 de clases anteriores -->
+        <section id="seccion3" class="fila"></section>
 
-             </div>
+        <!-- ================= SECCIÓN 4  ================= -->
+        <section id="seccion4" class="fila">
 
-             <div class="col-lg-4">
+            <!-- Columna Izquierda: Menú -->
+            <aside id="izq" class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <ul>
+                    <li><a href="#">link 1</a></li>
+                    <li><a href="#">link 2</a></li>
+                    <li><a href="#">link 3</a></li>
+                    <li><a href="#">link 4</a></li>
+                </ul>
+            </aside>
 
-                <center id="icono3">x</center>
+            <!-- Columna Central: Artículo -->
+            <article class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <h1>Lorem Ipsum</h1>
+                <p>
+                    <img src="img/img04.jpg" alt="Imagen de muestra">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis debitis, perspiciatis mollitia
+                    consectetur exercitationem soluta quae fugit illo et iste, quos inventore ab saepe omnis sapiente
+                    repellat laboriosam veritatis in?
+                </p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, exercitationem aliquid sint, accusamus
+                    quis reiciendis delectus adipisci perferendis ipsa odit tenetur eligendi aliquam esse error possimus
+                    nulla ipsam non! Vel.</p>
+            </article>
 
-             </div>
+            <!-- Columna Derecha: Formulario -->
+            <aside id="der" class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <h1>ingreso</h1>
+                <form>
+                    <input type="text" placeholder="Usuario">
+                    <input type="password" placeholder="Contraseña">
+                    <input type="submit" value="Enviar">
+                </form>
+            </aside>
 
-        </div>    
+        </section>
 
-       
+        <!-- ================= SECCIÓN 5 (FOOTER)  ================= -->
+        <footer class="fila">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">&copy; Todos los derechos reservados.</div>
+        </footer>
 
-    </header>
-   
-    <nav class="fila"></nav>
-
-    <section id="seccion3" class="fila"></section>
-
-    <section id="seccion4" class="fila"></section>
-
-
-    <footer class="fila"></footer>
-
-</div>
+    </div>
 
 </body>
-</html>
 
 </html>
