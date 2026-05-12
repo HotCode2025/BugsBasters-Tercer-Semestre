@@ -1,4 +1,4 @@
-package paquete 1;
+package paquete1;
 
 public class ClaseHija2 extends Clase2;
     public ClaseHija2{
