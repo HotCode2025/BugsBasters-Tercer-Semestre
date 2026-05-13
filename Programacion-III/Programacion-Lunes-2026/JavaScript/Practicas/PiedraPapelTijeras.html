@@ -1,0 +1,36 @@
+<!DOCTYPE html> <!-- Define que este documento es un archivo HTML5 -->
+<html lang="es"> <!-- Etiqueta principal del documento, indicando que el idioma es español -->
+<head> <!-- Contiene los metadatos y enlaces a recursos externos que no se ven directamente en la página -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres para que se vean bien las tildes y la ñ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Asegura que la página sea responsive y se adapte a dispositivos móviles -->
+    <title>Piedra, Papel o Tijera</title> <!-- Título que aparece en la pestaña superior del navegador -->
+    
+    <!-- Enlace para cargar la fuente moderna "Poppins" desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Enlace al archivo de estilos CSS (styles.css) para darle color y diseño -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> <!-- Etiqueta principal donde va todo el contenido visible de la página web -->
+    <div class="container"> <!-- Contenedor principal que centra todo en la pantalla -->
+        <div class="glass-panel"> <!-- Panel con efecto visual de "cristal" translúcido (Glassmorphism) -->
+            <div class="icon-container"> <!-- Contenedor para alinear los 3 emojis flotantes -->
+                <span class="icon rock">🪨</span> <!-- Icono decorativo de piedra -->
+                <span class="icon paper">📄</span> <!-- Icono decorativo de papel -->
+                <span class="icon scissors">✂️</span> <!-- Icono decorativo de tijera -->
+            </div>
+            <h1>Piedra, Papel o Tijera</h1> <!-- Título principal del juego (el que tiene color degradado) -->
+            <p class="subtitle">¡Prepara tu estrategia y gana 3 veces!</p> <!-- Subtítulo gris inferior -->
+            
+            <div class="status-indicator"> <!-- La "pastillita" oscura que muestra el estado actual del juego -->
+                <div class="pulse-dot"></div> <!-- El pequeño punto verde que parpadea como un pulso -->
+                <span>Esperando jugadas...</span> <!-- Texto indicador para el usuario -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Movemos el script al final del body para que el navegador cargue y muestre 
+         el diseño primero, antes de que el 'prompt' de JS pause la pantalla -->
+    <script src="codigo.js"></script>
+</body>
+</html>

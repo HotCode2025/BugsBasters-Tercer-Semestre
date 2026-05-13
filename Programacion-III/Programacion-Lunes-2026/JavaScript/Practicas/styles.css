@@ -1,0 +1,148 @@
+/* Reseteo básico: Quita los márgenes y rellenos por defecto que ponen los navegadores */
+* {
+    margin: 0; /* Sin margen exterior */
+    padding: 0; /* Sin margen interior */
+    box-sizing: border-box; /* Asegura que el tamaño incluya el borde y el relleno */
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: 'Poppins', sans-serif; /* Usa la fuente Poppins descargada de Google Fonts */
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Fondo con un degradado oscuro elegante */
+    color: #ffffff; /* Color de texto blanco por defecto */
+    min-height: 100vh; /* Ocupa al menos el 100% del alto de la pantalla visible */
+    display: flex; /* Usamos Flexbox para centrar el contenido fácilmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    overflow: hidden; /* Oculta cualquier cosa que se salga de la pantalla (evita barras de desplazamiento) */
+}
+
+/* Efecto de fondo animado sutil: Se usa un seudoelemento que actúa como una capa de fondo gigante */
+body::before {
+    content: ""; /* Obligatorio para seudoelementos */
+    position: absolute; /* Posición independiente del flujo normal */
+    top: -50%; /* Lo centramos respecto a la altura */
+    left: -50%; /* Lo centramos respecto al ancho */
+    width: 200%; /* Hacemos que sea el doble de grande que la pantalla */
+    height: 200%;
+    /* Crea un degradado radial semitransparente que actuará como destello */
+    background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 60%); 
+    animation: rotateBg 60s linear infinite; /* Anima el destello para que rote infinitamente durante 60s */
+    z-index: 0; /* Lo manda al fondo por detrás de todo lo demás */
+}
+
+/* Define la animación de rotación del fondo */
+@keyframes rotateBg {
+    from { transform: rotate(0deg); } /* Empieza en 0 grados */
+    to { transform: rotate(360deg); } /* Termina dando una vuelta completa (360 grados) */
+}
+
+/* Contenedor central principal */
+.container {
+    position: relative; /* Posición relativa para estar por encima del fondo animado */
+    z-index: 1; /* Esto asegura que el contenido esté delante del fondo */
+    width: 100%; /* Ocupa todo el ancho disponible... */
+    max-width: 600px; /* ...pero su límite son 600px para que no sea muy ancho en PC */
+    padding: 20px; /* Espacio interior para que no toque los bordes en el celular */
+}
+
+/* Efecto de cristal (Glassmorphism) para la tarjeta central */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.05); /* Fondo blanco casi transparente (5%) */
+    backdrop-filter: blur(16px); /* Aplica un desenfoque a lo que hay detrás, dando el efecto cristal */
+    -webkit-backdrop-filter: blur(16px); /* Lo mismo pero para compatibilidad con navegadores Safari */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil blanco al 10% de opacidad */
+    border-radius: 24px; /* Esquinas muy redondeadas */
+    padding: 50px 30px; /* Mucho espacio interior: 50px arriba/abajo y 30px a los lados */
+    text-align: center; /* Centra todo el texto por dentro */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* Sombra oscura pesada para dar profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves al interactuar (hover) */
+}
+
+/* Lo que pasa cuando pasamos el ratón por encima de la tarjeta de cristal */
+.glass-panel:hover {
+    transform: translateY(-5px); /* La tarjeta sube ligeramente (5 píxeles) en el eje Y */
+    box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.6); /* La sombra se hace más grande, dando efecto de elevación */
+}
+
+/* Contenedor para alinear los emojis en fila */
+.icon-container {
+    display: flex; /* Flexbox para ponerlos uno al lado del otro en horizontal */
+    justify-content: center; /* Centrados en medio de la tarjeta */
+    gap: 20px; /* Espacio de 20 píxeles entre cada emoji */
+    margin-bottom: 25px; /* Espacio inferior separándolos del título principal */
+}
+
+/* Estilo individual de cada emoji */
+.icon {
+    font-size: 3.5rem; /* Tamaño de fuente muy grande (los emojis se consideran texto) */
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3)); /* Sombra difuminada especial que respeta la forma del emoji */
+    animation: float 3s ease-in-out infinite; /* Aplica una animación de flotación infinita que dura 3s */
+}
+
+/* Desfasamos las animaciones para que no floten los 3 al mismo tiempo, dando un efecto de "ola" */
+.icon.rock { animation-delay: 0s; } /* Empieza a flotar de inmediato */
+.icon.paper { animation-delay: 0.2s; } /* Tarda 0.2s en empezar a flotar */
+.icon.scissors { animation-delay: 0.4s; } /* Tarda 0.4s en empezar a flotar */
+
+/* Definimos cómo funciona la animación "float" (flotar) */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); } /* Empieza en posición normal sin rotar */
+    50% { transform: translateY(-10px) rotate(5deg); } /* A la mitad, sube 10px y gira 5 grados */
+    100% { transform: translateY(0px) rotate(0deg); } /* Vuelve a la posición y rotación normal */
+}
+
+/* Estilo del título principal h1 */
+h1 {
+    font-size: 2.8rem; /* Tamaño de letra muy grande */
+    font-weight: 900; /* Letra ultra gruesa o "Black" */
+    margin-bottom: 10px; /* Separación pequeña con el texto de abajo */
+    /* Crea un texto con relleno degradado de azul cian claro a azul un poco más oscuro */
+    background: linear-gradient(to right, #00f2fe, #4facfe); 
+    -webkit-background-clip: text; /* Recorta el degradado del fondo usando la forma del texto */
+    -webkit-text-fill-color: transparent; /* Hace el color original del texto transparente para que se vea el fondo recortado */
+    text-shadow: 0 2px 10px rgba(79, 172, 254, 0.2); /* Una sombra azul sutil para que brille un poco */
+}
+
+/* Estilo del subtítulo ("¡Prepara tu estrategia...") */
+.subtitle {
+    font-size: 1.1rem; /* Tamaño normal tirando a grande */
+    color: #a0aec0; /* Gris claro azulado que contrasta muy bien en modo oscuro */
+    margin-bottom: 40px; /* Bastante espacio antes del indicador de estado */
+    font-weight: 400; /* Grosor de letra normal */
+}
+
+/* La pastilla inferior que dice "Esperando jugadas..." */
+.status-indicator {
+    display: inline-flex; /* Permite alinear elementos a su lado, en este caso el puntito verde y el texto */
+    align-items: center; /* Los centra verticalmente */
+    gap: 10px; /* Separa el punto verde del texto por 10px */
+    background: rgba(0, 0, 0, 0.3); /* Fondo negro semitransparente (30% de opacidad) */
+    padding: 10px 20px; /* Espaciado interno horizontal y vertical */
+    border-radius: 50px; /* Bordes totalmente redondeados (forma de pastilla) */
+    font-size: 0.9rem; /* Letra un poco más pequeña de lo normal */
+    color: #e2e8f0; /* Color gris muy claro casi blanco */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Borde blanco extremadamente sutil */
+}
+
+/* El punto verde dentro del indicador de estado */
+.pulse-dot {
+    width: 10px; /* Ancho de 10 píxeles */
+    height: 10px; /* Alto de 10 píxeles */
+    background-color: #48bb78; /* Color de fondo verde */
+    border-radius: 50%; /* Lo hace un círculo perfecto */
+    box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.7); /* Sombra inicial verde semitransparente pegada al círculo */
+    animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1); /* Aplica la animación de latido/pulso */
+}
+
+/* Define la animación del pulso ("latido") del punto verde */
+@keyframes pulse {
+    to { box-shadow: 0 0 0 15px rgba(72, 187, 120, 0); } /* Expande la sombra hacia afuera 15px mientras se vuelve transparente */
+}
+
+/* Responsividad: Reglas que aplican solo en pantallas de celular (ancho menor a 480px) */
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; } /* Reduce el tamaño del título principal para que quepa en la pantalla */
+    .icon { font-size: 2.5rem; } /* Reduce el tamaño de los emojis */
+    .glass-panel { padding: 30px 20px; } /* Reduce el espacio interior de la tarjeta principal */
+}
