@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reloj Dinámico</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --accent: #6ee7ff;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+
+    /* Fondo con orbes */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.4;
+      z-index: 0;
+    }
+    .one { width: 300px; height: 300px; background: #4cc9f0; top: -50px; left: -50px; }
+    .two { width: 300px; height: 300px; background: #f72585; bottom: -50px; right: -50px; }
+
+    /* Recuadro del reloj */
+    .panel {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 50px;
+      border-radius: 30px;
+      z-index: 1;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    #reloj {
+      font-size: clamp(3rem, 15vw, 8rem);
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      transition: color 0.5s ease;
+      text-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="orb one"></div>
+  <div class="orb two"></div>
+
+  <div class="panel">
+    <div id="reloj">00:00:00</div>
+  </div>
+
+  <script>
+    const reloj = document.getElementById("reloj");
+    const colores = ["#ff4500", "#1e90ff", "#32cd32", "#ffd700", "#ff69b4", "#8a2be2", "#ff8c00"];
+
+    function actualizarReloj() {
+      const ahora = new Date();
+      const h = String(ahora.getHours()).padStart(2, '0');
+      const m = String(ahora.getMinutes()).padStart(2, '0');
+      const s = String(ahora.getSeconds()).padStart(2, '0');
+      
+      reloj.textContent = `${h}:${m}:${s}`;
+      reloj.style.color = colores[ahora.getDay()];
+    }
+
+    setInterval(actualizarReloj, 1000);
+    actualizarReloj();
+  </script>
+</body>
+</html>
