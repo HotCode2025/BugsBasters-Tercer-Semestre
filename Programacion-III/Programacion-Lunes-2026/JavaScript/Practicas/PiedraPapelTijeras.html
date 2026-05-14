@@ -22,9 +22,20 @@
             <h1>Piedra, Papel o Tijera</h1> <!-- Título principal del juego (el que tiene color degradado) -->
             <p class="subtitle">¡Prepara tu estrategia y gana 3 veces!</p> <!-- Subtítulo gris inferior -->
             
+            <div class="scoreboard">
+                <div class="score">👤 Jugador: <span id="score-jugador">0</span></div>
+                <div class="score">💻 PC: <span id="score-pc">0</span></div>
+            </div>
+
+            <div class="buttons-container">
+                <button class="game-btn" id="btn-rock" onclick="jugar(1)">🪨 Piedra</button>
+                <button class="game-btn" id="btn-paper" onclick="jugar(2)">📄 Papel</button>
+                <button class="game-btn" id="btn-scissors" onclick="jugar(3)">✂️ Tijera</button>
+            </div>
+
             <div class="status-indicator"> <!-- La "pastillita" oscura que muestra el estado actual del juego -->
-                <div class="pulse-dot"></div> <!-- El pequeño punto verde que parpadea como un pulso -->
-                <span>Esperando jugadas...</span> <!-- Texto indicador para el usuario -->
+                <div class="pulse-dot" id="pulse-dot"></div> <!-- El pequeño punto verde que parpadea como un pulso -->
+                <span id="status-text">Esperando jugadas...</span> <!-- Texto indicador para el usuario -->
             </div>
         </div>
     </div>

@@ -140,9 +140,68 @@ h1 {
     to { box-shadow: 0 0 0 15px rgba(72, 187, 120, 0); } /* Expande la sombra hacia afuera 15px mientras se vuelve transparente */
 }
 
+/* Contenedor para los botones */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* Estilo para los botones del juego */
+.game-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.game-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.game-btn:active {
+    transform: translateY(0);
+}
+
+.game-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Marcador de puntuación */
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.score {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 /* Responsividad: Reglas que aplican solo en pantallas de celular (ancho menor a 480px) */
 @media (max-width: 480px) {
     h1 { font-size: 2rem; } /* Reduce el tamaño del título principal para que quepa en la pantalla */
     .icon { font-size: 2.5rem; } /* Reduce el tamaño de los emojis */
     .glass-panel { padding: 30px 20px; } /* Reduce el espacio interior de la tarjeta principal */
+    .buttons-container { flex-direction: column; gap: 10px; } /* Apila los botones en móviles */
+    .scoreboard { flex-direction: column; gap: 10px; } /* Apila las puntuaciones en móviles */
 }
