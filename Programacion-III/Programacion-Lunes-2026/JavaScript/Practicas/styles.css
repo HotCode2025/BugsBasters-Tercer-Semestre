@@ -197,6 +197,30 @@ h1 {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Botón de reinicio */
+.reset-btn {
+    background: linear-gradient(to right, #f56565, #e53e3e); /* Degradado rojo */
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.reset-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.reset-btn:active {
+    transform: translateY(0);
+}
+
 /* Responsividad: Reglas que aplican solo en pantallas de celular (ancho menor a 480px) */
 @media (max-width: 480px) {
     h1 { font-size: 2rem; } /* Reduce el tamaño del título principal para que quepa en la pantalla */

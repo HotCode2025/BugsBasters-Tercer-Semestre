@@ -72,5 +72,36 @@ function jugar(jugador) {
         document.getElementById("btn-rock").disabled = true;
         document.getElementById("btn-paper").disabled = true;
         document.getElementById("btn-scissors").disabled = true;
+
+        // Mostrar botón de reinicio
+        document.getElementById("btn-reset").style.display = "inline-block";
     }
+}
+
+// Función para reiniciar el juego
+function reiniciar() {
+    triunfos = 0;
+    perdidas = 0;
+    juegoTerminado = false;
+
+    // Reiniciar marcadores en el HTML
+    document.getElementById("score-jugador").innerText = "0";
+    document.getElementById("score-pc").innerText = "0";
+
+    // Reiniciar indicador de estado
+    let statusText = document.getElementById("status-text");
+    statusText.innerText = "Esperando jugadas...";
+    statusText.style.fontWeight = "normal";
+    statusText.style.color = "#e2e8f0";
+    
+    // Reiniciar el pulso a verde oscuro (color original)
+    document.getElementById("pulse-dot").style.backgroundColor = "#48bb78";
+
+    // Habilitar botones de juego
+    document.getElementById("btn-rock").disabled = false;
+    document.getElementById("btn-paper").disabled = false;
+    document.getElementById("btn-scissors").disabled = false;
+
+    // Ocultar botón de reinicio
+    document.getElementById("btn-reset").style.display = "none";
 }
