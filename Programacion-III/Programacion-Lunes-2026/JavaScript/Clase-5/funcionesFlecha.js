@@ -33,3 +33,25 @@ console.log(saludar2);
 const saludar3 = () => 'Saludos desde la funcion flecha tres'
 
 console.log(saludar3);
+
+//Continuamos con otro ejemplo
+const regresaObjeto = () => ({nombre: 'Juan', apellido: 'Lara'})
+
+console.log(regresaObjeto());
+
+//Funciones que reciben parametros
+const funcionParametros = ( mensaje ) => console.log( mensaje );
+
+funcionParametros('Saludos desde esta funcion con parametros');
+
+//Una funcion clasica
+const funcionParametrosClasica = function ( mensaje ){
+    console.log( mensaje );
+}
+
+funcionParametrosClasica('Saludos desde esta funcion clasica');
+
+//Se pueden omitir los parentesis en la funcion flecha de la siguiente manera
+const funcionConParametros = mensaje => console.log( mensaje );
+
+funcionConParametros('Otra forma de trabajar con funcion flecha');
