@@ -19,20 +19,19 @@ miFuncionFlecha();
 
 //Lo hacemos en una linea
 const saludar = () => console.log('Saludo a todos desde esta funcion flecha')
-console.log(saludar);
-
+saludar();
 
 //Otro ejemplo
 const saludar2 = () => {
     return 'Saludo a todos desde esta funcion flecha 2'
 }
 
-console.log(saludar2);
+console.log(saludar2());
 
 //Simplificamos la funcion anterior
 const saludar3 = () => 'Saludos desde la funcion flecha tres'
 
-console.log(saludar3);
+console.log(saludar3());
 
 //Continuamos con otro ejemplo
 const regresaObjeto = () => ({nombre: 'Juan', apellido: 'Lara'})
@@ -55,3 +54,11 @@ funcionParametrosClasica('Saludos desde esta funcion clasica');
 const funcionConParametros = mensaje => console.log( mensaje );
 
 funcionConParametros('Otra forma de trabajar con funcion flecha');
+
+//Ahora vemos funciones flecha con varios parametros
+//Podemos abrir la funcion y tener mas cosas dentro de ella
+const funcionesConParametros2 = (op1, op2) => {
+    let resultado = op1 + op2;
+    return resultado
+}
+console.log(funcionConParametros(3, 5));
