@@ -1,0 +1,86 @@
+package domain;
+
+public class Empleado {
+
+    protected String nombre;
+    protected double sueldo;
+
+    public Empleado(String nombre, double sueldo) {
+        this.nombre = nombre;
+        this.sueldo = sueldo;
+    }
+
+    // Método para la sobreescritura
+    public String obtenerDetalles() {
+        return "Nombre: " + this.nombre + ", Sueldo: " + this.sueldo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public double getSueldo() {
+        return sueldo;
+    }
+
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+    }
+}
+Gerente.java
+package domain;
+
+public class Gerente extends Empleado {
+
+    private String departamento;
+
+    public Gerente(String nombre, double sueldo, String departamento) {
+        super(nombre, sueldo);
+        this.departamento = departamento;
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
+    @Override
+    public String obtenerDetalles() {
+        return super.obtenerDetalles() +
+               ", Departamento: " + this.departamento;
+    }
+}
+TestSobreescritura.java
+package test;
+
+import domain.Empleado;
+import domain.Gerente;
+
+public class TestSobreescritura {
+
+    public static void main(String[] args) {
+
+        Empleado empleado1 = new Empleado("Juan", 10000);
+        imprimir(empleado1);
+
+        Gerente gerente1 = new Gerente("José", 5000, "Sistemas");
+        imprimir(gerente1);
+    }
+
+    public static void imprimir(Empleado empleado) {
+        String detalles = empleado.obtenerDetalles();
+        System.out.println("detalles = " + detalles);
+    }
+}
+Salida esperada
+detalles = Nombre: Juan, Sueldo: 10000.0
+detalles = Nombre: José, Sueldo: 5000.0, Departamento: Sistemas
+
+Esta es la versión completa y funcional del ejemplo clásico de Herencia, Sobreescritura (@Override) y Polimorfismo que se ve en tus capturas.
