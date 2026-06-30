@@ -16,7 +16,7 @@ class DatabaseConfig:
                 host='localhost',
                 database='clinica_db',  # Asegúrate que el nombre coincida con tu BD
                 user='root',
-                password='44282458s',   # Tu contraseña real
+                password='VA LA CONTRASENIA DE CADA UNO ',   #
                 port='3306'
             )
             return connection
