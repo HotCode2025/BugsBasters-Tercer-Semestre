@@ -1,0 +1,45 @@
+SISTEMA DE GESTION CLINICA - BUGSBASTERS
+========================================
+
+Este es el proyecto integrador de Programación III. El sistema está 
+desarrollado con Python y utiliza una arquitectura orientada a dominios.
+
+1. REQUISITOS PREVIOS
+---------------------
+- Python 3.10+ instalado.
+- MySQL Server instalado y en ejecución.
+
+2. INSTALACION PASO A PASO
+--------------------------
+1. Clonar el repositorio:
+   git clone   https://github.com/HotCode2025/BugsBasters-Tercer-Semestre.git
+   cd integrador_python
+
+2. Configurar el entorno virtual:
+   # Crear entorno virtual
+   python -m venv venv
+
+   # Activar entorno virtual (Windows PowerShell)
+   .\venv\Scripts\Activate.ps1
+
+3. Instalar dependencias:
+   pip install -r requirements.txt
+
+4. Configurar variables de entorno:
+   - Crear el archivo .env en la raíz del proyecto.
+   - Copiar el contenido de .env.example a .env
+   - Editar .env con tus credenciales locales de MySQL:
+     DATABASE_URL=mysql+pymysql://root:TU_CONTRASEÑA@localhost:3306/clinica_db
+     SECRET_KEY=una_clave_segura
+
+5. Configurar la base de datos:
+   - Asegúrate de que MySQL esté corriendo.
+   - Crea una base de datos vacía llamada "clinica_db".
+
+6. Ejecutar el proyecto:
+   python main.py
+
+3. NOTAS DE SEGURIDAD
+---------------------
+- NUNCA subas tu archivo .env al repositorio. Este archivo contiene 
+  credenciales sensibles y está incluido en el .gitignore.
