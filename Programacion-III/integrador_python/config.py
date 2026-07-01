@@ -3,20 +3,21 @@ import mysql.connector
 from mysql.connector import Error
 from dotenv import load_dotenv
 
-# Esto carga el .env
-load_dotenv() 
-DB_URL = os.getenv("DATABASE_URL")
+# Esto carga las variables del archivo .env
+load_dotenv()
+print(f"DEBUG: Host={os.getenv('DB_HOST')}")
+print(f"DEBUG: Password={os.getenv('DB_PASSWORD')}")
 
 class DatabaseConfig:
     @staticmethod
     def get_connection():
         try:
-            # Opción rápida: Cambia los valores aquí directamente
+            # Aquí usamos variables de entorno (más seguro)
             connection = mysql.connector.connect(
-                host='localhost',
-                database='clinica_db',  # Asegúrate que el nombre coincida con tu BD
-                user='root',
-                password='VA LA CONTRASENIA DE CADA UNO ',   #
+                host=os.getenv('DB_HOST', 'localhost'),
+                database=os.getenv('DB_NAME', 'clinica_db'),
+                user=os.getenv('DB_USER', 'root'),
+                password=os.getenv('DB_PASSWORD'), # <--- ESTO LEE TU .env
                 port='3306'
             )
             return connection
