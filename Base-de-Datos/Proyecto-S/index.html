@@ -1,94 +1,253 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/main.css">
+    <title>Recursos Digitales</title>
+
+    <link rel="stylesheet" href="./scss/main.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <nav class="navbar"></nav>
-    <nav class="navbar">
-        <p>Logo</p>
-        <button class="profile">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.4" d="M12.1207 12.78C12.0507 12.77 11.9607 12.77 11.8807 12.78C10.1207 12.72 8.7207 11.28 8.7207 9.50998C8.7207 7.69998 10.1807 6.22998 12.0007 6.22998C13.8107 6.22998 15.2807 7.69998 15.2807 9.50998C15.2707 11.28 13.8807 12.72 12.1207 12.78Z" stroke="#34A853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path opacity="0.34" d="M18.7398 19.3801C16.9598 21.0101 14.5998 22.0001 11.9998 22.0001C9.39977 22.0001 7.03977 21.0101 5.25977 19.3801C5.35977 18.4401 5.95977 17.5201 7.02977 16.8001C9.76977 14.9801 14.2498 14.9801 16.9698 16.8001C18.0398 17.5201 18.6398 18.4401 18.7398 19.3801Z" stroke="#34A853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#34A853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
-        <button class="wifhlist">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.7 4C18.87 4 21 6.98 21 9.76C21 15.39 12.16 20 12 20C11.84 20 3 15.39 3 9.76C3 6.98 5.13 4 8.3 4C10.12 4 11.31 4.91 12 5.71C12.69 4.91 13.88 4 15.7 4Z" stroke="#34A853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
-        <button class="cart">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" stroke="#34A853" stroke-width="1.5" d="M2 1C1.44772 1 1 1.44772 1 2C1 2.55228 1.44772 3 2 3H3.21922L6.78345 17.2569C5.73276 17.7236 5 18.7762 5 20C5 21.6569 6.34315 23 8 23C9.65685 23 11 21.6569 11 20C11 19.6494 10.9398 19.3128 10.8293 19H15.1707C15.0602 19.3128 15 19.6494 15 20C15 21.6569 16.3431 23 18 23C19.6569 23 21 21.6569 21 20C21 18.3431 19.6569 17 18 17H8.78078L8.28078 15H18C20.0642 15 21.3019 13.6959 21.9887 12.2559C22.6599 10.8487 22.8935 9.16692 22.975 7.94368C23.0884 6.24014 21.6803 5 20.1211 5H5.78078L5.15951 2.51493C4.93692 1.62459 4.13696 1 3.21922 1H2ZM18 13H7.78078L6.28078 7H20.1211C20.6742 7 21.0063 7.40675 20.9794 7.81078C20.9034 8.9522 20.6906 10.3318 20.1836 11.3949C19.6922 12.4251 19.0201 13 18 13ZM18 20.9938C17.4511 20.9938 17.0062 20.5489 17.0062 20C17.0062 19.4511 17.4511 19.0062 18 19.0062C18.5489 19.0062 18.9938 19.4511 18.9938 20C18.9938 20.5489 18.5489 20.9938 18 20.9938ZM7.00617 20C7.00617 20.5489 7.45112 20.9938 8 20.9938C8.54888 20.9938 8.99383 20.5489 8.99383 20C8.99383 19.4511 8.54888 19.0062 8 19.0062C7.45112 19.0062 7.00617 19.4511 7.00617 20Z" />
-            </svg>
-        </button>
-    </nav>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="./complementos/img/logo.png"
+                 alt="Logo"
+                 class="logo">
+        </div>
+
+        <nav class="nav">
+            <div class="icons">
+                <button class="profile">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.121 17.804C7.21942 16.6179 9.58958 15.9963 12 16C14.5 16 16.847 16.655 18.879 17.804M15 10C15 10.7956 14.6839 11.5587 14.1213 12.1213C13.5587 12.6839 12.7956 13 12 13C11.2044 13 10.4413 12.6839 9.87868 12.1213C9.31607 11.5587 9 10.7956 9 10C9 9.20435 9.31607 8.44129 9.87868 7.87868C10.4413 7.31607 11.2044 7 12 7C12.7956 7 13.5587 7.31607 14.1213 7.87868C14.6839 8.44129 15 9.20435 15 10ZM21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z"
+                            stroke="#C084FC"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="wishlist">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
+                            stroke="#C084FC"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="cart">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3 3H5L5.4 5M5.4 5H21L17 13H7M5.4 5L7 13M7 13L4.707 15.293C4.077 15.923 4.523 17 5.414 17H17M17 17C16.4696 17 15.9609 17.2107 15.5858 17.5858C15.2107 17.9609 15 18.4696 15 19C15 19.5304 15.2107 20.0391 15.5858 20.4142C15.9609 20.7893 16.4696 21 17 21C17.5304 21 18.0391 20.7893 18.4142 20.4142C18.7893 20.0391 19 19.5304 19 19C19 18.4696 18.7893 17.9609 18.4142 17.5858C18.0391 17.2107 17.5304 17 17 17ZM9 19C9 19.5304 8.78929 20.0391 8.41421 20.4142C8.03914 20.7893 7.53043 21 7 21C6.46957 21 5.96086 20.7893 5.58579 20.4142C5.21071 20.0391 5 19.5304 5 19C5 18.4696 5.21071 17.9609 5.58579 17.5858C5.96086 17.2107 6.46957 17 7 17C7.53043 17 8.03914 17.2107 8.41421 17.5858C8.78929 17.9609 9 18.4696 9 19Z"
+                            stroke="#C084FC"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
     <main class="main-section">
-        <article>
-            <div class="info-section">
-                <h2>INFORMACIÓN</h2>
-                <p>DESCRIPCIÓN DEL SITIO</p>
-                <button>Conoce más</button>
+        <section class="hero">
+            <div class="hero__text">
+                <p class="hero-subtitle">
+                    PLANTILLAS • ICONOS • HTML • WALLPAPERS
+                </p>
+                <h1>
+                    Recursos digitales
+                    <span>para crear sin límites.</span>
+                </h1>
+                <p class="hero-description">
+                    Descubrí packs de iconos, templates HTML, plantillas de CV,
+                    mockups, temas para VS Code y wallpapers minimalistas.
+                    Todo diseñado para ayudarte a crear proyectos únicos.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#productos" class="btn-primary">
+                        Explorar productos
+                    </a>
+                </div>
             </div>
-            <div class="image-section">
-                <img src="" alt="">
+
+            <div class="hero__image">
+
+                <img src="./complementos/img/fondo.png"
+                     alt="Recursos digitales">
+
             </div>
-        </article>
+
+        </section>
         <section class="product-section">
-            <div class="healthcare">
+            <div class="section1" id="productos">
+                <h2>Galería de productos</h2>
+                <div class="card-section">
+                   <div class="product-card">
+                     <div class="icons">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#3F3F46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                     </div>
+                        <div class="product-image">
+                            <img src="./complementos/img/iconos.jpg" alt="">
+                        </div>
+                        <h3>Packs de iconos</h3>
+                        <p>Colección de iconos modernos y versátiles para darle un toque profesional a tus proyectos, aplicaciones y sitios web.</p>
+                       
+                   </div>
+                   <div class="product-card">
+                    <div class="icons">
+                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#3F3F46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                       </svg>
+                    </div>
+                       <div class="product-image">
+                           <img src="./complementos/img/templates.jpg" alt="">
+                       </div>
+                       <h3>Templates HTML</h3>
+                       <p>Plantilla web lista para personalizar, con diseño responsive y código limpio para crear páginas modernas en minutos.</p>
+                       
+                  </div>
+                  <div class="product-card">
+                    <div class="icons">
+                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#3F3F46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                       </svg>
+                    </div>
+                       <div class="product-image">
+                           <img src="./complementos/img/plantilla.jpg" alt="">
+                       </div>
+                       <h3>Plantillas de CV</h3>
+                       <p>Currículum profesional, editable y con un diseño atractivo para destacar tus habilidades y causar una excelente primera impresión.</p>
+                       
+                  </div>
+                </div>
+           
+                   
+            </div>
+            <div class="section2">
+                <div class="card-section">
+                    <div class="product-card">
+                      <div class="icons">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#3F3F46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                         </svg>
+                      </div>
+                         <div class="product-image">
+                             <img src="./complementos/img/mockups.jpg" alt="">
+                         </div>
+                         <h3>Mockups</h3>
+                         <p>Presentá tus diseños de forma realista con mockups de alta calidad ideales para portfolios, redes sociales o clientes.</p>
+                         
+                    </div>
+                    <div class="product-card">
+                     <div class="icons">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#3F3F46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                     </div>
+                        <div class="product-image">
+                                <img src="./complementos/img/temas.jpg" alt="">
+                        </div>
+                        <h3>Temas para VScode</h3>
+                        <p>Personalizá Visual Studio Code con un tema moderno que mejora la legibilidad y hace más agradable tu experiencia al programar.</p>
+                       
+                   </div>
+                   <div class="product-card">
+                     <div class="icons">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#3F3F46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                        <div class="portfolio">
+                            <img src="./complementos/img/wall1.png" class="card1" alt="Wallpaper 1">
+                            <img src="./complementos/img/wall2.jpg" class="card2" alt="Wallpaper 2">
+                            <img src="./complementos/img/wall3.jpg" class="card3" alt="Wallpaper 3">
+                        </div>
+                        <h3>Wallpapers</h3>
+                        <p>Fondos de pantalla en alta resolución con diseños minimalistas y creativos para darle estilo a tu computadora.</p>
+                       
+                   </div>
+                 </div>
             </div>
         </section>
         <section class="info-section">
-            <div class="about-us">
-                <h3>¿Por qué nosotros?</h3>
-                <div class="earty">
-                    <img src="" alt="">
-                    <p></p>
-                </div>
-            </div>
-            <div class="gallery">
-                <h3>Galería de productos</h3>
-            </div>
-            <div>
-                <img src=" alt="">
-            </div>
-            <div>
-                <img src="" alt="">
-            </div>
-            <div>
-                <img src="" alt="">
-            </div>
-            <div class="location">
-                <h3>Encuéntranos</h3>
-                <div class="map">
-                    <img src="" alt="">
-                </div>
-                <p></p>
-            </div>
-        </section>
+            <section class="why-us" id="why-us">
+                    <h2>¿Por qué elegirnos?</h2>
+                    <div class="why-container">
+                        <div class="why-card">
+                            <div class="why-icon">⚡</div>
+                            <h3>Descarga inmediata</h3>
+                            <p>
+                                Accedé a tus recursos apenas completes la compra.
+                                Sin esperas y listo para usar.
+                            </p>
+                        </div>
+                        <div class="why-card">
+                            <div class="why-icon">🎨</div>
+                            <h3>Diseño profesional</h3>
+                            <p>
+                                Recursos creados con un estilo moderno,
+                                cuidando cada detalle para ofrecer la mejor calidad.
+                            </p>
+                        </div>
+                        <div class="why-card">
+                            <div class="why-icon">💜</div>
+                            <h3>Fácil de personalizar</h3>
+                            <p>
+                                Editá cada recurso según tus necesidades
+                                y adaptalo rápidamente a tu proyecto.
+                            </p>
+                        </div>
+                        <div class="why-card">
+                            <div class="why-icon">🚀</div>
+                            <h3>Siempre actualizado</h3>
+                            <p>
+                                Incorporamos nuevos recursos y mejoras
+                                para que siempre encuentres contenido actual.
+                            </p>
+                        </div>
+                    </div>
+                </section>
     </main>
     <footer>
-        <h1>LOGO</h1>
-        <p>Careers</p>
-        <p>Careers</p>
-        <p>Careers</p>
-        <div class="social-media">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-        </div>
+        <section class="contact">
+                    <h2>Encontranos</h2>
+                    <p>
+                        Seguinos en nuestras redes y enterate antes que nadie
+                        de nuevos recursos, promociones y lanzamientos.
+                    </p>
+                    <div class="socials">
+                        <a href="#">
+                            <img src="./complementos/img/instagram-logo.png" alt="Instagram">
+                        </a>
+                        <a href="#">
+                            <img src="./complementos/img/twitter-logo.png" alt="Twitter">
+                        </a>
+                        <a href="https://github.com/HotCode2025/BugsBasters-Tercer-Semestre.git" target="_blank">
+                            <img src="./complementos/img/github-svgrepo-com.svg" alt="GitHub">
+                        </a>
+                        <a href="#">
+                            <img src="./complementos/img/facebook-logo.png" alt="facebook">
+                        </a>
+                    </div>
+                </section>
     </footer>
-    
 </body>
 </html>
